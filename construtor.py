@@ -3,7 +3,7 @@ import os
 
 class construtor:
     
-    def __init__(__main__):
+    def __init__(self):
         dir = {}
         dir['src'] = 'src'
         dir['tests'] = 'tests'
@@ -34,7 +34,7 @@ class construtor:
             print('Diretório SRC criado com sucesso! ')
 
         else:
-            print(f'Ja existem o diretório {dir["src"]} ')
+            print(f'Ja existe o diretório {dir["src"]} ')
         
         if not os.path.exists(dir_tests):
             os.makedirs(dir_tests)
@@ -43,25 +43,30 @@ class construtor:
             print('Diretório TESTS criado com sucesso! ')
         
         else:
-            print(f'Ja existem o diretório {dir["tests"]} ')
+            print(f'Ja existe o diretório {dir["tests"]} ')
         
         if not os.path.exists(dir_docs):
             os.makedirs(dir_docs)
             file = open(dir_docs + docs_file1, 'w')
             file = open(dir_docs + docs_file2, "w")
             file = open(dir_docs + docs_file3, "w")
-            if not os.path.exists(dir['abs']+'/README.md'):
-                file = open(dir['abs'] + '/README.md', "w")
-            else:
-                print('Arquivo README.md já existe no diretório!')
-                file = open(dir['abs'] + '/requirements.txt', "w")
-            
-            file.close()
             print('Diretório DOCS criado com sucesso! ')
-
+            file.close()
         else:
-            print(f'Ja existem o diretório {dir["docs"]} ')
+            print(f'Ja existe o diretório {dir["docs"]} ')
 
+        if not os.path.exists(dir['abs']+'/README.md'):
+            file = open(dir['abs'] + '/README.md', "w")
+        else:
+            print('Arquivo README.md já existe no diretório!')
+    
+        if not os.path.exists(dir['abs']+ '/requirements.txt'):
+            file = open(dir['abs'] + '/requirements.txt', "w")
+        else:
+            print('Arquivo requirements.txt já existe no diretório!')
+            
+        
+                
         
 if __name__=="__main__":
     construtor()
