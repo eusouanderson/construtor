@@ -1,6 +1,6 @@
 import os
-from examples import cg_md, ind
-
+from time import sleep
+from examples import cg_md, ind, rmd
 
 class construtor:
     
@@ -31,8 +31,11 @@ class construtor:
         if not os.path.exists(dir_src):
             os.makedirs(dir_src)
             file = open(dir_src + file['1'], "w")
+            sleep(1)
             file = open(dir_src + file['2'], "w")
+            sleep(1)
             file = open(dir_src + file['3'], "w")
+            sleep(1)
             file.close()
             print('Diretório SRC criado com sucesso! ')
 
@@ -62,6 +65,7 @@ class construtor:
 
         if not os.path.exists(dir['abs']+'/README.md'):
             file = open(dir['abs'] + '/README.md', "w")
+            file.write(rmd)
         else:
             print('Arquivo README.md já existe no diretório!')
     
