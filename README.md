@@ -16,7 +16,13 @@ O projeto Construtor é escrito em Python e utiliza as seguintes tecnologias:
 1. Faça o download do código-fonte do projeto Construtor.
 2. Certifique-se de ter o Python instalado em sua máquina.
 3. Execute o arquivo `construtor.py` a partir da linha de comando.
-4. Siga as instruções fornecidas pelo Construtor para personalizar a estrutura de diretórios e arquivos, se necessário.
+4. Se estiver usando terminal bash instale o construtor no alias.
+
+~~~bash
+    bash run_app.sh
+~~~
+
+4. Siga as instruções fornecidas pelo Construtor para personalizar a estrutura no bash .
 5. Aguarde enquanto o Construtor cria a estrutura e os arquivos do projeto.
 6. Pronto! Agora você pode começar a desenvolver seu projeto Python com a estrutura e arquivos padrões já criados.
 
