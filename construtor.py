@@ -30,12 +30,10 @@ class construtor:
 
         if not os.path.exists(dir_src):
             os.makedirs(dir_src)
-            c = 0
-            for c in range(0, len(dir)):
-                c += 1
-                file = open(dir_src + file['1'], "w")
-                file = open(dir_src + file['2'], "w")
-                file = open(dir_src + file['3'], "w")
+            file = open(dir_src + file['1'], "w")
+            file = open(dir_src + file['2'], "w")
+            file = open(dir_src + file['3'], "w")
+            file.close()
             print('Diretório SRC criado com sucesso! ')
 
         else:
