@@ -1,4 +1,5 @@
 import os
+from examples import md, ind
 
 
 class construtor:
@@ -30,11 +31,11 @@ class construtor:
         if not os.path.exists(dir_src):
             os.makedirs(dir_src)
             c = 0
-            for c in range(0, esc):
+            for c in range(0, len(dir)):
                 c += 1
                 file = open(dir_src + file['1'], "w")
-                file = open(dir_src + file['1'], "w")
                 file = open(dir_src + file['2'], "w")
+                file = open(dir_src + file['3'], "w")
             print('Diretório SRC criado com sucesso! ')
 
         else:
@@ -52,8 +53,10 @@ class construtor:
         if not os.path.exists(dir_docs):
             os.makedirs(dir_docs)
             file = open(dir_docs + docs_file1, 'w')
+            file.write(ind)
             file = open(dir_docs + docs_file2, "w")
             file = open(dir_docs + docs_file3, "w")
+            file.write(md)
             print('Diretório DOCS criado com sucesso! ')
             file.close()
         else:
@@ -70,7 +73,7 @@ class construtor:
             print('Arquivo requirements.txt já existe no diretório!')
 
 try:
-    pwd = str(input('Digite o diretório do projeto: '))        
+    pwd = str(input('Digite o diretório do projeto: ').strip())        
 except KeyboardInterrupt:
 
     print('Cancelado pelo usuário')             

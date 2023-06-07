@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# adiciona permissão root ao construtor
+# adiciona permissão ao construtor
 chmod +x /home/anderson/Projetos/construtor/construtor.py
 
 # Verifica se o python esta instalado
