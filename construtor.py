@@ -3,34 +3,38 @@ import os
 
 class construtor:
     
-    def __init__(self):
+    def __init__(self, pwd):
         dir = {}
         dir['src'] = 'src'
         dir['tests'] = 'tests'
         dir['docs'] = 'docs'
-        dir['abs'] = os.getcwd()
+        dir['abs'] =  pwd #os.getcwd() 
 
-        file1 = '/__init__.py'
-        file2 = '/module1.py'
-        file3 = '/module2.py'
+        file = {}
+        file['1'] = '/__init__.py'
+        file['2'] = '/module1.py'
+        file['3'] = '/module2.py'
 
-        test_file1 = '/test_modulo1.py'
-        test_file2 = '/test_modulo2.py'
+        test_file1 = '/test_module1.py'
+        test_file2 = '/test_module2.py'
 
         docs_file1 = '/index.md'
         docs_file2 = '/user_guide.md'
         docs_file3 = '/contribution_guide.md'
 
-        for c in range(len(dir)):
-            dir_src = os.path.join(dir['abs'], dir['src'])
-            dir_tests = os.path.join(dir['abs'], dir['tests'])
-            dir_docs = os.path.join(dir['abs'], dir['docs'])
+
+        dir_src = os.path.join(dir['abs'], dir['src'])
+        dir_tests = os.path.join(dir['abs'], dir['tests'])
+        dir_docs = os.path.join(dir['abs'], dir['docs'])
 
         if not os.path.exists(dir_src):
             os.makedirs(dir_src)
-            file = open(dir_src + file1, "w")
-            file = open(dir_src + file2, "w")
-            file = open(dir_src + file3, "w")
+            c = 0
+            for c in range(0, esc):
+                c += 1
+                file = open(dir_src + file['1'], "w")
+                file = open(dir_src + file['1'], "w")
+                file = open(dir_src + file['2'], "w")
             print('Diretório SRC criado com sucesso! ')
 
         else:
@@ -65,8 +69,8 @@ class construtor:
         else:
             print('Arquivo requirements.txt já existe no diretório!')
             
-        
+pwd = str(input('Digite o diretório do projeto: '))        
                 
         
 if __name__=="__main__":
-    construtor()
+    construtor(pwd)
