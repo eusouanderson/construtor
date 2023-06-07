@@ -52,6 +52,8 @@ def construtor():
         file = open(dir_docs + docs_file2, "w")
         file = open(dir_docs + docs_file3, "w")
         file = open(dir['abs'] + '/README.md', "w")
+        file = open(dir['abs'] + '/requirements.txt', "w")
+        
         file.close()
         print('Diretório DOCS criado com sucesso! ')
 
