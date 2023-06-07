@@ -1,5 +1,5 @@
 import os
-from examples import md, ind
+from examples import cg_md, ind
 
 
 class construtor:
@@ -56,7 +56,7 @@ class construtor:
             file.write(ind)
             file = open(dir_docs + docs_file2, "w")
             file = open(dir_docs + docs_file3, "w")
-            file.write(md)
+            file.write(cg_md)
             print('Diretório DOCS criado com sucesso! ')
             file.close()
         else:

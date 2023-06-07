@@ -6,7 +6,7 @@ contribuition_guid
 import os
 
 caminho_atual = os.getcwd()
-nome_do_projeto =  os.path.basename(caminho_atual)
+nome_do_projeto =  os.path.basename(caminho_atual).capitalize()
 
 cg_md = f'''# Guia de Contribuição para o Projeto {nome_do_projeto}
 
