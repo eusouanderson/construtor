@@ -68,9 +68,14 @@ class construtor:
             file = open(dir['abs'] + '/requirements.txt', "w")
         else:
             print('Arquivo requirements.txt já existe no diretório!')
-            
-pwd = str(input('Digite o diretório do projeto: '))        
-                
-        
-if __name__=="__main__":
-    construtor(pwd)
+
+try:
+    pwd = str(input('Digite o diretório do projeto: '))        
+except KeyboardInterrupt:
+
+    print('Cancelado pelo usuário')             
+try:
+    if __name__=="__main__":
+        construtor(pwd)
+except NameError:
+    pass
